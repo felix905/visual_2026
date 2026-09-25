@@ -16,6 +16,267 @@ body {
   font-family: Inter, "Segoe UI", sans-serif;
 }
 
+:focus-visible {
+  outline: 3px solid #14b8a6;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 9999px;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: transform 200ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.nav-link,
+.mobile-nav-link {
+  color: #334155;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.nav-link:hover,
+.mobile-nav-link:hover {
+  color: #0f172a;
+}
+
+.mobile-nav-link {
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.5rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-top: 0.75rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.section-lead {
+  margin-top: 1rem;
+  max-width: 42rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #475569;
+}
+
+.audience-card,
+.offer-card,
+.process-card,
+.validation-card {
+  border-width: 1px;
+  border-radius: 1.5rem;
+  background: #fff;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.audience-card {
+  display: block;
+  padding: 1.75rem;
+  box-shadow: 0 20px 45px -24px rgba(15, 23, 42, 0.25);
+}
+
+.audience-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 22px 45px -25px rgba(15, 23, 42, 0.4);
+}
+
+.audience-tag {
+  display: inline-flex;
+  border-radius: 9999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.card-link span {
+  transition: transform 200ms ease;
+}
+
+.group:hover .card-link span,
+.card-link:hover span {
+  transform: translateX(0.2rem);
+}
+
+.offer-card {
+  padding: 1.5rem;
+  box-shadow: 0 20px 45px -24px rgba(15, 23, 42, 0.18);
+}
+
+.topic-pill {
+  border-radius: 9999px;
+  background: #fff;
+  padding: 0.45rem 0.7rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.topic-arrow {
+  color: #94a3b8;
+}
+
+.service-tile {
+  min-height: 9rem;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  background: #0f172a;
+  padding: 1.25rem;
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.service-tile:hover {
+  transform: translateY(-0.2rem);
+  border-color: #818cf8;
+}
+
+.service-tile h3 {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.service-number {
+  color: #a5b4fc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.process-card {
+  padding: 1.5rem;
+  box-shadow: 0 20px 45px -24px rgba(15, 23, 42, 0.2);
+}
+
+.process-number {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.process-card h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.process-card p {
+  margin-top: 0.75rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.validation-card {
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  padding: 1.5rem;
+}
+
+.validation-card span {
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.validation-card h3 {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.validation-card p {
+  margin-top: 0.75rem;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+.footer-list a:hover {
+  color: #0f172a;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .offer-card {
+    padding: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
