@@ -72,9 +72,7 @@ if (educationTabs) {
   });
 
   const hashTarget = window.location.hash.slice(1);
-  const initialTab = tabs.find((tab) =>
-    document.getElementById(tab.getAttribute('aria-controls'))?.querySelector(`#${CSS.escape(hashTarget)}`),
-  );
+  const initialTab = tabs.find((tab) => tab.dataset.educationTab === hashTarget);
 
   if (initialTab) activateEducationTab(initialTab);
 }
