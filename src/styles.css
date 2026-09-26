@@ -127,6 +127,52 @@ body {
   transition: transform 200ms ease;
 }
 
+.education-tabs {
+  display: inline-flex;
+  max-width: 100%;
+  gap: 0.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  background: #fff;
+  padding: 0.25rem;
+}
+
+.education-tab {
+  min-width: 8.5rem;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  color: #334155;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.education-tab[aria-selected="true"] {
+  background: #17191c;
+  color: #fff;
+}
+
+.education-tab:focus-visible {
+  outline: 3px solid #14b8a6;
+  outline-offset: 3px;
+}
+
+@media (max-width: 420px) {
+  .education-tabs {
+    display: flex;
+  }
+
+  .education-tab {
+    flex: 1;
+    min-width: 0;
+    padding-inline: 0.75rem;
+  }
+}
+
 .group:hover .card-link span,
 .card-link:hover span {
   transform: translateX(0.2rem);
