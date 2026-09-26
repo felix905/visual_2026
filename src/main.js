@@ -2,6 +2,33 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const mobileNav = document.querySelector('[data-mobile-nav]');
 const menuOpenIcon = document.querySelector('[data-menu-icon="open"]');
 const menuCloseIcon = document.querySelector('[data-menu-icon="close"]');
+const brandLink = document.querySelector('[aria-label="Visium Digital, inicio"]');
+
+if (brandLink) {
+  const logo = document.createElement('img');
+  logo.src = new URL('./assets/img/logo_visium.svg', import.meta.url).href;
+  logo.alt = 'Visium Digital';
+  logo.width = 216;
+  logo.height = 34;
+  logo.className = 'h-7 w-auto';
+  brandLink.replaceChildren(logo);
+}
+
+const setTablerIcon = (icon, name, paths) => {
+  if (!icon) return;
+
+  icon.dataset.tablerIcon = name;
+  icon.setAttribute('viewBox', '0 0 24 24');
+  icon.setAttribute('fill', 'none');
+  icon.setAttribute('stroke', 'currentColor');
+  icon.setAttribute('stroke-width', '2');
+  icon.setAttribute('stroke-linecap', 'round');
+  icon.setAttribute('stroke-linejoin', 'round');
+  icon.innerHTML = paths.map((path) => `<path d="${path}" />`).join('');
+};
+
+setTablerIcon(menuOpenIcon, 'menu-2', ['M4 6l16 0', 'M4 12l16 0', 'M4 18l16 0']);
+setTablerIcon(menuCloseIcon, 'x', ['M18 6l-12 12', 'M6 6l12 12']);
 
 if (menuToggle && mobileNav) {
   const setMenuState = (isOpen) => {

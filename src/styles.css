@@ -89,18 +89,16 @@ body {
   border-width: 1px;
   border-radius: 1.5rem;
   background: #fff;
-  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, border-color 200ms ease;
 }
 
 .audience-card {
   display: block;
   padding: 1.75rem;
-  box-shadow: 0 20px 45px -24px rgba(15, 23, 42, 0.25);
 }
 
 .audience-card:hover {
   transform: translateY(-0.25rem);
-  box-shadow: 0 22px 45px -25px rgba(15, 23, 42, 0.4);
 }
 
 .audience-tag {
@@ -180,14 +178,16 @@ body {
 
 .offer-card {
   padding: 1.5rem;
-  box-shadow: 0 20px 45px -24px rgba(15, 23, 42, 0.18);
 }
 
 .topic-pill {
   border-radius: 9999px;
   background: #fff;
   padding: 0.45rem 0.7rem;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+main div.shadow-soft {
+  box-shadow: none;
 }
 
 .topic-arrow {
@@ -224,7 +224,6 @@ body {
 
 .process-card {
   padding: 1.5rem;
-  box-shadow: 0 20px 45px -24px rgba(15, 23, 42, 0.2);
 }
 
 .process-number {
