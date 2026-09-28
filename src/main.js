@@ -2,17 +2,6 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const mobileNav = document.querySelector('[data-mobile-nav]');
 const menuOpenIcon = document.querySelector('[data-menu-icon="open"]');
 const menuCloseIcon = document.querySelector('[data-menu-icon="close"]');
-const brandLink = document.querySelector('[aria-label="Visium Digital, inicio"]');
-
-if (brandLink) {
-  const logo = document.createElement('img');
-  logo.src = new URL('./assets/img/logo_visium.svg', import.meta.url).href;
-  logo.alt = 'Visium Digital';
-  logo.width = 216;
-  logo.height = 34;
-  logo.className = 'h-7 w-auto';
-  brandLink.replaceChildren(logo);
-}
 
 const setTablerIcon = (icon, name, paths) => {
   if (!icon) return;
