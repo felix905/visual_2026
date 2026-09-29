@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
 }
 
+main > section.bg-white,
+body > footer.bg-white {
+  background-color: rgb(229 231 235 / 50%);
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -405,7 +410,7 @@ main div.shadow-soft {
   min-height: min(80vh, 52rem);
   align-items: center;
   border-color: #e2e8f0;
-  background: linear-gradient(180deg, #f8fafc 0%, #fff 58%, #f0fdfa 100%);
+  background: rgb(229 231 235 / 50%);
 }
 
 .home-hero__inner {
@@ -420,36 +425,44 @@ main div.shadow-soft {
 }
 
 .home-hero__copy {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
   text-align: center;
 }
 
-.home-hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.72);
-  padding: 0.65rem 1rem;
-  color: #334155;
-  letter-spacing: 0.08em;
+.home-hero__avatars {
+  isolation: isolate;
 }
 
-.home-hero__eyebrow::before {
-  height: 0.5rem;
-  width: 0.5rem;
+.home-hero__highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.16em;
+  border-radius: 9999px;
+  background: #ffe4ad;
+  padding: 0.02em 0.25em 0.08em;
+  vertical-align: 0.04em;
+  white-space: nowrap;
+}
+
+.home-hero__highlight-dot {
+  height: 0.2em;
+  width: 0.2em;
   flex: 0 0 auto;
   border-radius: 9999px;
-  background: #0f766e;
-  content: "";
-  animation: home-pulse 1.8s ease-in-out infinite;
+  background: #f59e0b;
+}
+
+.home-hero__proof {
+  min-height: 1.25rem;
 }
 
 .home-hero__title {
-  max-width: 58rem;
+  max-width: 60rem;
   margin-inline: auto;
   letter-spacing: 0;
-  line-height: 1.08;
+  line-height: 1.05;
 }
 
 .home-hero__lead {
@@ -460,21 +473,20 @@ main div.shadow-soft {
   justify-content: center;
 }
 
-@keyframes home-pulse {
-  50% {
-    box-shadow: 0 0 0 0.3rem rgba(15, 118, 110, 0.12);
-  }
-}
-
 @media (max-width: 639px) {
   .home-hero__inner {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
+
+  .home-hero__highlight {
+    gap: 0.12em;
+    padding-inline: 0.18em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-hero__eyebrow::before {
+  .home-hero__badge-dot {
     animation: none;
   }
 }
